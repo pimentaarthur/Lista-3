@@ -1,0 +1,49 @@
+using System;
+
+    namespace num1{
+
+        class num1{
+
+
+           static void Main(string[] args){
+
+           String alunos, metodo;
+           double notaA,notaB,notaC,media_ari,media_pon;
+
+           Console.WriteLine("deseja informar a nota de um aluno?\ninforme 'n' para não e qualquer outra tecla para sim.");
+            alunos = Console.ReadLine();
+
+           while (alunos != "n"){
+
+            Console.WriteLine("informe a primeira nota");
+            notaA = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("informe a primeira nota");
+            notaB = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("informe a primeira nota");
+            notaC = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("\n\ninforme o calculo que será executado.\n'A' = media aritimetica\n'P' = media ponderada");
+            metodo = Console.ReadLine();
+
+            if(metodo == "A"){
+                media_ari = (notaA + notaB + notaC) /3;
+                Console.WriteLine("\nmedia aritimetica do aluno = "+media_ari);
+            }
+            else if(metodo =="P"){
+                media_pon = (5*notaA)+(3*notaB)+(2*notaC);
+                Console.WriteLine("\nmedia ponderada do aluno = "+media_pon);
+            }
+            Console.WriteLine("\n\ndeseja informar a nota de um aluno?\ninforme 'n' para não e qualquer outra tecla para sim.");
+            alunos = Console.ReadLine();
+
+           }
+
+           
+             
+  }
+}
+}
+                
+                
