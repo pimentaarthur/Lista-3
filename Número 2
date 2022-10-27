@@ -1,0 +1,46 @@
+using System;
+
+    namespace num1{
+
+        class num1{
+
+            static void Main(String[] args){
+
+            double salario;
+            salario = coleta();
+            Console.WriteLine("salario médio da populaçao = "+salario);
+
+
+
+            }
+
+            static double coleta(){
+                int filhos, filhos_totais =0;
+                double salario, media_salario , salario_total =0  ;
+                String desicao;
+
+                Console.WriteLine("deseja informar o salario?\n'S' para sim e qualquer outra tecla para não");
+                desicao = Console.ReadLine();
+
+                while(desicao.ToUpper() =="S"){
+                                        
+                    Console.WriteLine("informe o salario");
+                    salario = double.Parse(Console.ReadLine());
+
+                    salario_total = salario + salario_total;  
+                   
+                    Console.WriteLine("informe o número de filhos");
+                    filhos = int.Parse(Console.ReadLine());
+
+                    filhos_totais = filhos_totais + filhos;
+
+                    Console.WriteLine("deseja informar mais um salario?\n informe 'S' para sim ou qualquer outra tecla para não");
+                    desicao = Console.ReadLine();
+                }
+                media_salario = salario_total/filhos_totais;
+
+                return media_salario;
+
+            }
+        }
+    }
