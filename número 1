@@ -10,7 +10,7 @@ using System;
            String alunos, metodo;
            double notaA,notaB,notaC,media_ari,media_pon;
 
-           Console.WriteLine("deseja informar a nota de um aluno?\ninforme 'n' para não e qualquer outra tecla para sim.");
+           Console.WriteLine("deseja informar a nota de um aluno?\ninforme 'n' para não e qualquer outra tecla para sim");
             alunos = Console.ReadLine();
 
            while (alunos != "n"){
