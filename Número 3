@@ -1,0 +1,87 @@
+using System;
+
+    namespace num1{
+
+        class num1{
+
+            static void Main(String [] args){
+
+                int numA, numB, numC;
+                string desicao = "s";
+
+                while(desicao.ToLower() == "s"){
+
+                    numA = valorA();
+                    numB = valorB();
+                    numC = valorC();
+                    ordenar(numA,numB,numC);
+
+                    Console.WriteLine("\n\ndeseja informar mais 3 valores?\nCaso Sim aperte 's'\nCaso Não informe qualquer tecla");
+                    desicao = Console.ReadLine();
+
+                }
+
+            }
+
+            static int valorA(){
+                int a;
+                Console.WriteLine("informe o primeiro valor");
+                a = int.Parse(Console.ReadLine());
+
+                return a;
+            }
+
+            static int valorB(){
+                int b;
+                Console.WriteLine("informe o segundo valor");
+                b = int.Parse(Console.ReadLine());
+
+                return b;
+            }
+
+            static int valorC(){
+                int c;
+                Console.WriteLine("informe o terceiro valor");
+                c = int.Parse(Console.ReadLine());
+
+                return c;
+            }
+
+            static void ordenar(int a, int b ,int c){
+
+                int pri,seg,terc;
+
+                 if (c > a && c > b)
+            {
+                pri = c;
+                if (a > b)
+                {
+                    seg = a;
+                    terc = b;
+                }
+                else
+                {
+                    seg = b;
+                    terc = a;
+                }
+                Console.WriteLine("maior = "+pri+"\nmédio = "+seg+"\nmenor = "+terc);
+            }
+            else if (c > a && c < b)
+            {
+                pri = b;
+                seg = c;
+                terc = a;
+                Console.WriteLine("maior = "+pri+"\nmédio = "+seg+"\nmenor = "+terc);
+            }
+            else
+            {
+                pri = a;
+                seg = b;
+                terc = c;
+
+                Console.WriteLine("maior = "+pri+"\nmédio = "+seg+"\nmenor = "+terc);
+            }
+
+         }
+     }
+ }
